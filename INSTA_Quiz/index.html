@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+  // Auto-start quiz with random topic
+  window.onload = () => {
+    const topics = ['history', 'science'];
+    const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+    startQuiz(randomTopic);
+  };
+</script>
+
+  <div class="quiz-container hidden" id="quiz">
+    <h2 id="question">Loading question...</h2>
+    <ul id="options"></ul>
+    <button id="next-btn">Next</button>
+    <div id="score-box" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open INSTA-Quiz",
+            "url": "http://localhost:8080/INSTA-quiz/html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
